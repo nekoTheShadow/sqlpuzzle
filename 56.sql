@@ -1,0 +1,24 @@
+DROP TABLE IF EXISTS Hotel;
+
+CREATE TABLE Hotel
+(floor_nbr INTEGER NOT NULL,
+ room_nbr INTEGER);
+
+INSERT INTO Hotel VALUES(1, NULL);
+INSERT INTO Hotel VALUES(1, NULL);
+INSERT INTO Hotel VALUES(1, NULL);
+INSERT INTO Hotel VALUES(2, NULL);
+INSERT INTO Hotel VALUES(2, NULL);
+INSERT INTO Hotel VALUES(3, NULL);
+
+-- Postgresだとこれが動かない?
+-- UPDATE Hotel h1
+-- SET room_nbr = ROW_NUMBER() OVER (PARTITION BY floor_nbr) 
+
+INSERT INTO Hotel
+SELECT floor_nbr, ROW_NUMBER() OVER (PARTITION BY floor_nbr)
+FROM Hotel;
+
+DELETE FROM Hotel WHERE room_nbr IS NULL;
+
+SELECT * FROM Hotel;
