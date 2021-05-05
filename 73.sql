@@ -1,0 +1,28 @@
+DROP TABLE IF EXISTS Staging;
+
+CREATE TABLE Staging
+ (col1  INTEGER,
+  col2  INTEGER,
+  col3  INTEGER,
+  col4  INTEGER,
+  col5  INTEGER,
+  col6  INTEGER,
+  col7  INTEGER,
+  col8  INTEGER,
+  col9  INTEGER,
+  col10 INTEGER);
+
+--オールNULL
+INSERT INTO Staging VALUES(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+--オール1
+INSERT INTO Staging VALUES(1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
+
+--少なくとも一つは9
+INSERT INTO Staging VALUES(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 9);
+INSERT INTO Staging VALUES(NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 9, 9);
+
+SELECT * FROM Staging;
+DELETE FROM Staging
+WHERE COALESCE(col1, col2, col3, col4, col5, col6, col7, col8, col9, col10) IS NULL;
+SELECT * FROM Staging;
