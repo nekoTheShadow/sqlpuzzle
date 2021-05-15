@@ -15,7 +15,7 @@ INSERT INTO Customers VALUES(3, 'Haxley', 'Kate', 2, 'Chicago',  1, 10);
 INSERT INTO Customers VALUES(4, 'Darwin', 'John', 9, 'Los',      0, 5);
 INSERT INTO Customers VALUES(5, 'Haxley', 'Mick', 2, 'Keswick',  0, 10);
 
--- d•¡s‚ª‚í‚©‚é‚æ‚¤‚ÉC³‚·‚éB
+-- é‡è¤‡è¡ŒãŒã‚ã‹ã‚‹ã‚ˆã†ã«ä¿®æ­£ã™ã‚‹ã€‚
 SELECT c1.custnbr, c2.custnbr
 FROM Customers c1
 JOIN Customers c2 ON c1.custnbr < c2.custnbr

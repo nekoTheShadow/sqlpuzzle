@@ -20,8 +20,14 @@ docker run --rm -d \
 
 # 自分用のメモ
 
-未回答の問題を確認するone-liner; ただしパズル67については未回答で判定される。
+1. 未回答の問題を確認するone-liner; ただしパズル67については未回答で判定される。
 
 ```
 seq 75 | xargs printf "%02d.sql\n" | while read line; do [[ ! -e ${line} ]] && echo ${line}; done
+```
+
+2. SQLファイルをすべてUTF-8に変換する。
+
+```
+nkf -w --overwrite *.sql
 ```

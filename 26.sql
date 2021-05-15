@@ -16,7 +16,7 @@ INSERT INTO DataFlowDiagrams VALUES('Proc1',  'output',   'guesses');
 INSERT INTO DataFlowDiagrams VALUES('Proc2',  'reckon',   'guesses');
 INSERT INTO DataFlowDiagrams VALUES('Proc2',  'reckon',   'opinions' );
 
--- EXCEPTÇégÇ§Ç‚ÇËï˚
+-- EXCEPT„Çí‰Ωø„ÅÜ„ÇÑ„ÇäÊñπ
   (SELECT a.diagram_name, a.bubble_name, b.flow_name
    FROM DataFlowDiagrams a
    CROSS JOIN DataFlowDiagrams b)
@@ -24,7 +24,7 @@ EXCEPT
   (SELECT diagram_name, bubble_name, flow_name 
    FROM DataFlowDiagrams);
 
--- NOT EXISTSÇégÇ§Ç‚ÇËï˚
+-- NOT EXISTS„Çí‰Ωø„ÅÜ„ÇÑ„ÇäÊñπ
 SELECT DISTINCT a.diagram_name, a.bubble_name, b.flow_name
 FROM DataFlowDiagrams a
 CROSS JOIN DataFlowDiagrams b

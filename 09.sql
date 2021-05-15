@@ -1,17 +1,17 @@
 DROP TABLE IF EXISTS Restaurant;
 
--- 0001~1000‚ğˆµ‚¤
+-- 0001~1000ã‚’æ‰±ã†
 CREATE TABLE Restaurant( seat INTEGER);
 INSERT INTO Restaurant VALUES(1);
 INSERT INTO Restaurant VALUES(3);
 INSERT INTO Restaurant VALUES(4);
 INSERT INTO Restaurant VALUES(7);
 
--- ”Ô•º‚ğ“Š“ü‚·‚éB
+-- ç•ªå…µã‚’æŠ•å…¥ã™ã‚‹ã€‚
 INSERT INTO Restaurant VALUES(0);
 INSERT INTO Restaurant VALUES(1001);
 
--- ‚»‚Ì4‚Æ“¯‚¶‚Á‚Û‚¢
+-- ãã®4ã¨åŒã˜ã£ã½ã„
 SELECT (R1.seat + 1), (MIN(R2.seat) - 1)
 FROM Restaurant R1 
 JOIN Restaurant R2 ON R1.seat < R2.seat

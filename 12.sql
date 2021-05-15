@@ -56,8 +56,8 @@ INSERT INTO ClaimStatusCodes VALUES('SF', 'Suit filed'            ,  3);
 INSERT INTO ClaimStatusCodes VALUES('CL', 'closed'                ,  4);
 
 
--- 1. �퍐�l���Ƃɂ����Ƃ��X�e�[�^�X���i��ł�����̂����߂�
--- 2. 1.�ł��Ƃ߂��X�e�[�^�X�̂����A�i�ׂ��ƂɃX�e�[�^�X���ł��i��ł��Ȃ����̂����߂�
+-- 1. 被告人ごとにもっともステータスが進んでいるものを求める
+-- 2. 1.でもとめたステータスのうち、訴訟ごとにステータスが最も進んでいないものを求める
 WITH 
 S AS (
   SELECT

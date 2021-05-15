@@ -15,7 +15,7 @@ INSERT INTO Schedule VALUES (7, '2006-02-09 11:00', '2006-02-09 13:00');
 INSERT INTO Schedule VALUES (8, '2006-02-09 15:00', '2006-02-09 16:00');
 INSERT INTO Schedule VALUES (9, '2006-02-09 18:00', '2006-02-09 20:00');
 
--- MIN‚ðŽg‚¤•û–@
+-- MINã‚’ä½¿ã†æ–¹æ³•
 SELECT *
 FROM Schedule
 WHERE depart_time = (
@@ -32,7 +32,7 @@ WHERE depart_time = (
   WHERE depart_time >= '2006-02-09 16:30'
 );
 
--- RANK‚ðŽg‚¤•û–@
+-- RANKã‚’ä½¿ã†æ–¹æ³•
 SELECT *
 FROM (
   SELECT *, RANK() OVER (ORDER BY depart_time) rnk

@@ -5,14 +5,14 @@ CREATE TABLE Register
  student_name CHAR(10) NOT NULL,
  teacher_name CHAR(10) NOT NULL);
 
-INSERT INTO Register VALUES(10, '¶“k‚P', 'æ¶‚P');
+INSERT INTO Register VALUES(10, 'ç”Ÿå¾’ï¼‘', 'å…ˆç”Ÿï¼‘');
 
-INSERT INTO Register VALUES(20, '¶“k‚P', 'æ¶‚P');
-INSERT INTO Register VALUES(20, '¶“k‚P', 'æ¶‚Q');
+INSERT INTO Register VALUES(20, 'ç”Ÿå¾’ï¼‘', 'å…ˆç”Ÿï¼‘');
+INSERT INTO Register VALUES(20, 'ç”Ÿå¾’ï¼‘', 'å…ˆç”Ÿï¼’');
 
-INSERT INTO Register VALUES(30, '¶“k‚P', 'æ¶‚P');
-INSERT INTO Register VALUES(30, '¶“k‚P', 'æ¶‚Q');
-INSERT INTO Register VALUES(30, '¶“k‚P', 'æ¶‚R');
+INSERT INTO Register VALUES(30, 'ç”Ÿå¾’ï¼‘', 'å…ˆç”Ÿï¼‘');
+INSERT INTO Register VALUES(30, 'ç”Ÿå¾’ï¼‘', 'å…ˆç”Ÿï¼’');
+INSERT INTO Register VALUES(30, 'ç”Ÿå¾’ï¼‘', 'å…ˆç”Ÿï¼“');
 
 SELECT 
   course_nbr,

@@ -18,7 +18,7 @@ LEFT OUTER JOIN SalesSlips b
   AND a.item_b = b.item_a
 WHERE a.item_a <= a.item_b;
 
--- Š´S‚µ‚½“š‚¦‚ðŽÊŒo‚µ‚Ä‚¨‚­
+-- æ„Ÿå¿ƒã—ãŸç­”ãˆã‚’å†™çµŒã—ã¦ãŠã
 SELECT 
   CASE WHEN item_a <= item_b THEN item_a ELSE item_b END s1, 
   CASE WHEN item_a <= item_b THEN item_b ELSE item_a END s2, 

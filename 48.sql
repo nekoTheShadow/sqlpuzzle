@@ -10,7 +10,7 @@ INSERT INTO Inventory VALUES('Delta'  ,16);
 INSERT INTO Inventory VALUES('Gamma'  ,50);
 INSERT INTO Inventory VALUES('Epsilon', 1);
 
--- �����ł͍ċA���g��������2�͂��Ȃ�悳����
+-- ここでは再帰を使ったが解答2はかなりよさそう
 WITH RECURSIVE i AS (
   SELECT goods, pieces FROM Inventory
   UNION ALL

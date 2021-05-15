@@ -19,7 +19,7 @@ INSERT INTO Timesheets VALUES (10, '1997-01-17', '1997-01-17');
 INSERT INTO Timesheets VALUES (11, '1997-01-01', '1997-01-17');
 
 
--- ‚ ‚Á‚Ä‚¢‚é‚Ì‚©?
+-- ã‚ã£ã¦ã„ã‚‹ã®ã‹?
 WITH RECURSIVE a (src_task_id, dst_task_id, dst_start_date, dst_end_date) AS (
     SELECT task_id, task_id, start_date, end_date FROM Timesheets
   UNION ALL
@@ -37,8 +37,8 @@ GROUP BY (
   FROM a
   WHERE src_task_id IN (SELECT src_task_id FROM a WHERE a.dst_task_id = t.task_id));
 
--- ‚»‚Ì3‚ªˆê”Ô‚æ‚³‚»‚¤?
--- http://mickindex.sakura.ne.jp/database/celko/celko_se.html ‚©‚çƒRƒsƒy
+-- ãã®3ãŒä¸€ç•ªã‚ˆã•ãã†?
+-- http://mickindex.sakura.ne.jp/database/celko/celko_se.html ã‹ã‚‰ã‚³ãƒ”ãƒš
 SELECT start_date, MIN(end_date)
 FROM ( 
   SELECT T1.start_date,T2.end_date

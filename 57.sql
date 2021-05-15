@@ -9,7 +9,7 @@ INSERT INTO Numbers VALUES (8);
 INSERT INTO Numbers VALUES (14);
 INSERT INTO Numbers VALUES (20);
 
--- ����SQL�����ʂ�Ԃ�����A�Ԃł͂Ȃ�
+-- 次のSQLが結果を返したら連番ではない
 SELECT *
 FROM (
   SELECT seq, LEAD(seq) OVER (ORDER BY seq) nxt
@@ -17,6 +17,6 @@ FROM (
 ) t
 WHERE NOT (nxt IS NULL OR seq + 1 = nxt);
 
--- ��1���f���炵���̂ŃR�s�y
+-- 解答1が素晴らしいのでコピペ
 SELECT CASE WHEN COUNT(*) + MIN(seq) - 1 = MAX(seq) THEN 'OK' ELSE 'NG' END
 FROM Numbers;

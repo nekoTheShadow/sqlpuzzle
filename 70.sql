@@ -1,6 +1,6 @@
--- �{���ł�INSERT��UPDATE�𗘗p������@���Љ��Ă��邪�A
--- trend�͌v�Z��̂��߁A�Œ�l�Ƃ��Ă͎����Ȃ����@���悢��
--- �l�I�ɂ͍l����B
+-- 本書ではINSERTやUPDATEを利用する方法も紹介されているが、
+-- trendは計算列のため、固定値としては持たない方法がよいと
+-- 個人的には考える。
 
 DROP VIEW IF EXISTS StockTrend;
 DROP TABLE IF EXISTS StockHistory;

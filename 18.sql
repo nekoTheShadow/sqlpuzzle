@@ -6,12 +6,12 @@ CREATE TABLE Consumers
  con_id  INTEGER,
  fam     INTEGER);
 
-INSERT INTO Consumers VALUES('ボブ',        'A', 1, NULL );
-INSERT INTO Consumers VALUES('ジョー',      'B', 3, NULL );
-INSERT INTO Consumers VALUES('マーク' ,     'C', 5, NULL );
-INSERT INTO Consumers VALUES('メアリー',    'A', 2,    1 );
-INSERT INTO Consumers VALUES('ヴィッキー',  'B', 4,    3 );
-INSERT INTO Consumers VALUES('ウェイン',    'D', 6, NULL );
+INSERT INTO Consumers VALUES('繝懊ヶ',        'A', 1, NULL );
+INSERT INTO Consumers VALUES('繧ｸ繝ｧ繝ｼ',      'B', 3, NULL );
+INSERT INTO Consumers VALUES('繝槭�ｼ繧ｯ' ,     'C', 5, NULL );
+INSERT INTO Consumers VALUES('繝｡繧｢繝ｪ繝ｼ',    'A', 2,    1 );
+INSERT INTO Consumers VALUES('繝ｴ繧｣繝�繧ｭ繝ｼ',  'B', 4,    3 );
+INSERT INTO Consumers VALUES('繧ｦ繧ｧ繧､繝ｳ',    'D', 6, NULL );
 
 DELETE FROM Consumers c1
 WHERE c1.fam IS NULL

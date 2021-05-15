@@ -27,7 +27,7 @@ CHECK (count_overlaps(room_nbr, arrival_date, departure_date) = 0);
 INSERT INTO Hotel VALUES (1, '2008-01-01', '2008-01-03', 'Coe');
 -- OK
 INSERT INTO Hotel VALUES (1, '2008-01-03', '2008-01-05', 'Doe');
--- é∏îsÅI CoeéÅÇ∆Ç©Ç‘ÇÈ
+-- Â§±ÊïóÔºÅ CoeÊ∞è„Å®„Åã„Å∂„Çã
 INSERT INTO Hotel VALUES (1, '2008-01-02', '2008-01-05', 'Roe');
 
 

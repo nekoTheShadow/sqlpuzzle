@@ -31,14 +31,14 @@ INSERT INTO Bar VALUES (3, 640);
 INSERT INTO Bar VALUES (3, 1);
 
 
--- ƒTƒuƒNƒGƒŠ‚ª2‚Â‚Ì•û–@
+-- ã‚µãƒ–ã‚¯ã‚¨ãƒªãŒ2ã¤ã®æ–¹æ³•
 SELECT
   A.acct_nbr,
   COALESCE((SELECT SUM(foo_qty) FROM Foo F WHERE A.acct_nbr = F.acct_nbr), 0) AS foo_qty_tot,
   COALESCE((SELECT SUM(bar_qty) FROM Bar B WHERE A.acct_nbr = B.acct_nbr), 0) AS bar_qty_tot
 FROM Accounts A;
 
--- ƒTƒuƒNƒGƒŠ‚ª1‚Â‚¾‚¯
+-- ã‚µãƒ–ã‚¯ã‚¨ãƒªãŒ1ã¤ã ã‘
 SELECT
   A.acct_nbr,
   COALESCE(SUM(F.foo_qty), 0) AS foo_qty_tot,

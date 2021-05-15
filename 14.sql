@@ -14,17 +14,17 @@ CREATE TABLE Phones
     PRIMARY KEY (emp_id, phone_type),
     FOREIGN KEY (emp_id) REFERENCES Personnel(emp_id));
 
-INSERT INTO Personnel VALUES(1, 'ŽR“c', '‘¾˜Y');
-INSERT INTO Personnel VALUES(2, 'ã–ì', '“ñ˜Y');
-INSERT INTO Personnel VALUES(3, '‚“c', 'ŽO˜Y');
-INSERT INTO Personnel VALUES(4, '¼‰ª', 'Žl˜Y');
+INSERT INTO Personnel VALUES(1, 'å±±ç”°', 'å¤ªéƒŽ');
+INSERT INTO Personnel VALUES(2, 'ä¸Šé‡Ž', 'äºŒéƒŽ');
+INSERT INTO Personnel VALUES(3, 'é«˜ç”°', 'ä¸‰éƒŽ');
+INSERT INTO Personnel VALUES(4, 'æ¾å²¡', 'å››éƒŽ');
 
 INSERT INTO Phones VALUES(1, 'hom', 1111);
 INSERT INTO Phones VALUES(1, 'fax', 2222);
 INSERT INTO Phones VALUES(2, 'hom', 3333);
 INSERT INTO Phones VALUES(3, 'fax', 4444);
 
--- ‰ð“š1: CASE‚ðŠˆ—p‚·‚éB‚»‚Ì‘ã‚í‚èJOIN‚Í1‰ñ‚¾‚¯
+-- è§£ç­”1: CASEã‚’æ´»ç”¨ã™ã‚‹ã€‚ãã®ä»£ã‚ã‚ŠJOINã¯1å›žã ã‘
 SELECT 
   P1.*,
   MAX(CASE WHEN P2.phone_type = 'hom' THEN phone_nbr END),
@@ -33,7 +33,7 @@ FROM Personnel P1
 LEFT OUTER JOIN Phones P2 ON P1.emp_id = P2.emp_id
 GROUP BY P1.emp_id;
 
--- ‰ð“š2: 2‰ñJOIN‚·‚éB
+-- è§£ç­”2: 2å›žJOINã™ã‚‹ã€‚
 SELECT P.*, Q1.phone_nbr, Q2.phone_nbr
 FROM Personnel P
 LEFT OUTER JOIN Phones Q1 ON P.emp_id = Q1.emp_id AND Q1.phone_type = 'hom'

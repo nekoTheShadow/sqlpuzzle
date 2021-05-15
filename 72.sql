@@ -31,23 +31,23 @@ CREATE TABLE PersonnelSchedule (
   PRIMARY KEY (emp_id, avail_start_time)
 );
 
---ŒÚ‹qƒe[ƒuƒ‹
-INSERT INTO Clients VALUES (1, '“c’† ‘¾˜Y');
-INSERT INTO Clients VALUES (2, '“c’† Ÿ˜Y');
-INSERT INTO Clients VALUES (3, '“c’† O˜Y');
+--é¡§å®¢ãƒ†ãƒ¼ãƒ–ãƒ«
+INSERT INTO Clients VALUES (1, 'ç”°ä¸­ å¤ªéƒ');
+INSERT INTO Clients VALUES (2, 'ç”°ä¸­ æ¬¡éƒ');
+INSERT INTO Clients VALUES (3, 'ç”°ä¸­ ä¸‰éƒ');
 
---Ğˆõƒe[ƒuƒ‹
-INSERT INTO Personnel VALUES (1, '—é–Ø ‘¾˜Y');
-INSERT INTO Personnel VALUES (2, '—é–Ø Ÿ˜Y');
-INSERT INTO Personnel VALUES (3, '—é–Ø O˜Y');
+--ç¤¾å“¡ãƒ†ãƒ¼ãƒ–ãƒ«
+INSERT INTO Personnel VALUES (1, 'éˆ´æœ¨ å¤ªéƒ');
+INSERT INTO Personnel VALUES (2, 'éˆ´æœ¨ æ¬¡éƒ');
+INSERT INTO Personnel VALUES (3, 'éˆ´æœ¨ ä¸‰éƒ');
 
---—\–ñƒe[ƒuƒ‹
+--äºˆç´„ãƒ†ãƒ¼ãƒ–ãƒ«
 INSERT INTO ScheduledCalls VALUES(1, '2007-01-01:12:00', '2007-01-01:17:00', 1);
 INSERT INTO ScheduledCalls VALUES(1, '2007-01-01:18:00', '2007-01-01:21:00', 2);
 INSERT INTO ScheduledCalls VALUES(2, '2007-01-02:09:00', '2007-01-02:15:00', 3);
 INSERT INTO ScheduledCalls VALUES(3, '2007-01-02:18:00', '2007-01-02:21:00', 2);
 
---‘Î‰‰Â”\‚ÈĞˆõƒe[ƒuƒ‹
+--å¯¾å¿œå¯èƒ½ãªç¤¾å“¡ãƒ†ãƒ¼ãƒ–ãƒ«
 INSERT INTO PersonnelSchedule VALUES (1, '2007-01-01:09:00', '2007-01-01:15:00');
 INSERT INTO PersonnelSchedule VALUES (2, '2007-01-02:07:00', '2007-01-02:08:00');
 INSERT INTO PersonnelSchedule VALUES (2, '2007-01-02:17:00', '2007-01-02:21:00');

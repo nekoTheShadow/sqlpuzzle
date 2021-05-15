@@ -15,7 +15,7 @@ INSERT INTO Foobar VALUES('xxxxxx', '52636', 0, 10, 20, 30, 40);
 INSERT INTO Foobar VALUES('xxxxxx', '52751', 0,  5,  6,  7,  8);
 INSERT INTO Foobar VALUES('xxxxxx', '52768', 0, 20, 40, 60, 80);
 
--- ���ł�낤�Ƃ��Ă��邱�Ƃ�JOIN�Ȃ��Ŏ���
+-- 問題でやろうとしていることをJOINなしで実現
 SELECT 
   SUM(CASE WHEN pin_num = '52636' THEN calc_rslt_val + calc_adj_val END),
   SUM(CASE WHEN pin_num = '52636' THEN unit_rslt_val + unit_adj_val END),
@@ -28,7 +28,7 @@ WHERE empl_id = 'xxxxxx'
 AND pin_num IN ('52636','52751','52768')
 AND empl_rcd = 0;
 
--- ����3�Ɠ����B
+-- その3と同じ。
 SELECT 
   pin_num,
   SUM(calc_rslt_val + calc_adj_val),

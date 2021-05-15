@@ -6,13 +6,13 @@ CREATE TABLE Salaries
  sal_amt DECIMAL (8,2) NOT NULL,
     PRIMARY KEY (emp_name, sal_date));
 
-INSERT INTO Salaries VALUES ('トム', '1996-06-20', 500.00); 
-INSERT INTO Salaries VALUES ('トム', '1996-08-20', 700.00); 
-INSERT INTO Salaries VALUES ('トム', '1996-10-20', 800.00); 
-INSERT INTO Salaries VALUES ('トム', '1996-12-20', 900.00); 
-INSERT INTO Salaries VALUES ('ディック', '1996-06-20', 500.00); 
-INSERT INTO Salaries VALUES ('ハリー','1996-07-20',500.00); 
-INSERT INTO Salaries VALUES ('ハリー', '1996-09-20', 700.00); 
+INSERT INTO Salaries VALUES ('繝医Β', '1996-06-20', 500.00); 
+INSERT INTO Salaries VALUES ('繝医Β', '1996-08-20', 700.00); 
+INSERT INTO Salaries VALUES ('繝医Β', '1996-10-20', 800.00); 
+INSERT INTO Salaries VALUES ('繝医Β', '1996-12-20', 900.00); 
+INSERT INTO Salaries VALUES ('繝�繧｣繝�繧ｯ', '1996-06-20', 500.00); 
+INSERT INTO Salaries VALUES ('繝上Μ繝ｼ','1996-07-20',500.00); 
+INSERT INTO Salaries VALUES ('繝上Μ繝ｼ', '1996-09-20', 700.00); 
 
 SELECT 
   emp_name,

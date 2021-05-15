@@ -5,7 +5,7 @@ CREATE TABLE Projects
  step_nbr INTEGER NOT NULL
     CHECK (step_nbr BETWEEN 0 AND 1000),
  step_status CHAR(1) NOT NULL
-    CHECK (step_status IN ('C', 'W')), -- C‚ÍŠ®—¹AW‚Í‘Ò‹@
+    CHECK (step_status IN ('C', 'W')), -- Cã¯å®Œäº†ã€Wã¯å¾…æ©Ÿ
     PRIMARY KEY (workorder_id, step_nbr));
 
 INSERT INTO Projects VALUES('AA100', 0, 'C' );
@@ -16,14 +16,14 @@ INSERT INTO Projects VALUES('AA200', 1, 'W' );
 INSERT INTO Projects VALUES('AA300', 0, 'C' );
 INSERT INTO Projects VALUES('AA300', 1, 'C' );
 
--- ©•ª‚Ì‰ğ“š
+-- è‡ªåˆ†ã®è§£ç­”
 SELECT workorder_id
 FROM Projects
 GROUP BY workorder_id
 HAVING SUM(CASE WHEN step_nbr = 0 AND step_status = 'C' THEN 1 ELSE 0 END) = 1
 AND SUM(CASE WHEN step_nbr > 0 AND step_status = 'W' THEN 1 ELSE 0 END) = COUNT(*) - 1;
 
--- ‚»‚Ì1‚ª‚í‚©‚è‚â‚·‚¢‚Ì‚ÅÊŒo
+-- ãã®1ãŒã‚ã‹ã‚Šã‚„ã™ã„ã®ã§å†™çµŒ
 SELECT workorder_id
 FROM Projects p1
 WHERE step_nbr = 0
